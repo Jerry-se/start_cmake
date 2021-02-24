@@ -9,5 +9,6 @@ set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX
 project(root)
 add_executable(test src/main.cpp)
 # 添加子目录
+add_subdirectory(src/dynamic_lib)
 add_subdirectory(src/static_lib)
 add_subdirectory(src/testlib)
