@@ -23,7 +23,11 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -D_DEBUG")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${_TEST_C_CXX_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${_TEST_C_CXX_FLAGS}")
 
-add_executable(test src/main.cpp)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/output)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/output)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/output)
+
+add_executable(hello_world src/main.cpp)
 # 添加子目录
 add_subdirectory(src/dynamic_lib)
 add_subdirectory(src/static_lib)
