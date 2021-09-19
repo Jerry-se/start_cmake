@@ -1,5 +1,6 @@
 project(testlib)
 include_directories (.)
+add_definitions(-DMYSDK_EXPORTS)
 set(SRC_LIST main.cpp)
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 target_link_libraries(${PROJECT_NAME} static_lib)
